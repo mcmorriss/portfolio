@@ -155,3 +155,76 @@ header .footer p{
 .mobile-nav-active header .footer {
     left: 0;
 }
+
+main{
+    margin-left: 300px;
+    background-color: var(--bgColor);
+    transition: 0.3s;
+}
+
+@media only screen and (max-width: 1050px){
+    main{
+        margin-left: 0;
+    }
+}
+
+#home{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px;
+    position: relative;
+}
+
+#home::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#home .home-row{
+    z-index: 1;
+}
+#home .home-row h1{
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+    line-height: 70px;
+}
+
+#home .home-row h1 span{
+    color: var(--themeColor);
+}
+
+#home .home-row p{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#home .home-row p span{
+    border-bottom: 4px solid var(--themeColor);
+}
+
+@media only screen and (max-width: 670px){
+    #home{
+        padding: 30px;
+    }
+    #home .home-row h1{
+        font-size: 35px;
+        letter-spacing: 0;
+        line-height: 50px;
+    }
+    #home .home-row br{
+        display: none;
+    }
+    #home .home-row p{
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
